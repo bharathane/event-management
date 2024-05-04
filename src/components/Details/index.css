@@ -1,0 +1,62 @@
+.the-job {
+  width: 1212px;
+  height: 134px;
+  top: 184px;
+  left: 260px;
+  gap: 0px;
+  text-align: center;
+  font-family: Druk Wide Trial;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 67.2px;
+  margin-top: 35px;
+  color: #000000;
+}
+
+.venue-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.venue-content {
+  width: 50vw;
+}
+
+.price-button {
+  width: 80px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: orange;
+}
+
+.krl-rooms {
+  padding: 20px;
+}
+
+.rooms-image {
+  width: 8vw;
+  margin: 10px;
+}
+.rooms-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
+}
+
+.calender-link {
+  text-decoration: none;
+  background-color: #fdeccd;
+  color: #e6680c;
+  width: 150px;
+  height: 45px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e6680c;
+}

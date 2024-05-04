@@ -1,0 +1,21 @@
+.home-filter-li {
+  list-style: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.home-fliter-h1 {
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  background: none;
+  outline: none;
+}

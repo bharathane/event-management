@@ -1,0 +1,40 @@
+.calender-parent {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 100px;
+  height: 50vh;
+}
+.reverse {
+  width: Fixed (280px) px;
+  height: Hug (64px) px;
+  top: 762px;
+  left: 256px;
+  padding: 20px 32px 20px 32px;
+  gap: 8px;
+  border-radius: 16px 0px 0px 0px;
+  background: #a29f9a;
+  color: white;
+
+  margin-top: 80px;
+}
+
+.time-list {
+  list-style: none;
+  width: 50px;
+}
+
+.time-button {
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.calender-flex {
+  display: flex;
+}

@@ -1,0 +1,67 @@
+.allian-evnets {
+  text-align: center;
+  font-family: Druk Wide Trial;
+  font-size: 126px;
+  font-weight: 700;
+  line-height: 151.2px;
+  text-align: center;
+}
+
+.magical-meeting {
+  font-family: Druk Wide Trial;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 67.2px;
+  text-align: center;
+}
+
+.home-div {
+  background-color: #fff152;
+  min-height: 70vh;
+
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.categories {
+  position: relative;
+  left: 48px;
+  width: 50vw;
+}
+
+.each-card-li {
+  list-style: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.each-container {
+  width: 23vw;
+}
+.home-filter-ul {
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  box-sizing: border-box;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.each-card-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.allian-footer {
+  font-family: SoDo Sans;
+  font-size: 150px;
+  font-weight: 600;
+  line-height: 359.99px;
+  text-align: center;
+}
+
+.event-span {
+  color: rgb(243, 45, 45);
+}

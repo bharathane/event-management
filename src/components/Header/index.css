@@ -1,0 +1,9 @@
+.header-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  height: 35px;
+}
