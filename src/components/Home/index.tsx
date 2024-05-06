@@ -11,13 +11,25 @@ import "./index.css";
 const eventsObj = [
   {
     id: uuidv4(),
-    category: "ALL",
+    category: "PRESS",
     imgUrl:
       "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814454/Component_92_gehjyi.png",
   },
   {
     id: uuidv4(),
     category: "BUSSINESS",
+    imgUrl:
+      "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814454/Component_92_gehjyi.png",
+  },
+  {
+    id: uuidv4(),
+    category: "BUSSINESS",
+    imgUrl:
+      "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814454/Component_95_if7eqj.png",
+  },
+  {
+    id: uuidv4(),
+    category: "BRANDING",
     imgUrl:
       "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814454/Component_95_if7eqj.png",
   },
@@ -65,6 +77,12 @@ const eventsObj = [
     imgUrl:
       "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814453/Component_99_kmafmn.png",
   },
+  {
+    id: uuidv4(),
+    category: "MORE",
+    imgUrl:
+      "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814453/Component_103_dkgw4x.png",
+  },
 
   {
     id: uuidv4(),
@@ -85,6 +103,7 @@ const homeFilterObjs = [
 
 const Home = () => {
   const [categoryName, setCategoryName] = useState("ALL");
+  const [idForFilterBtn, setIdForFilterBtn] = useState(homeFilterObjs[0].id);
   /*useEffect(() => {
     const fetchEventsData = async () => {
       const url = `https://api.seatgeek.com/2/events?client_id=NDEzNDM3ODR8MTcxNDgxMzIxNy42MzIxMDA4`;
@@ -116,14 +135,22 @@ const Home = () => {
       return each;
     }
   });
+
+  const getIdForFilter = (id: string) => {
+    setIdForFilterBtn(id);
+  };
   return (
     <div>
       <Header />
       <div>
         <h1 className="allian-evnets">ALLIAN EVENTS</h1>
-        <hr />
+        <div className="home-hr-div">
+          <hr className="home-hr" />
+        </div>
         <h1 className="magical-meeting">MAGICAL MEETING PLACE</h1>
-        <hr />
+        <div className="home-hr-div">
+          <hr className="home-hr" />
+        </div>
       </div>
 
       <div className="home-div">
@@ -134,6 +161,8 @@ const Home = () => {
               single={each}
               key={each.id}
               getCategory={getCategory}
+              getIdForFilter={getIdForFilter}
+              isFilterBtnActive={idForFilterBtn === each.id}
             />
           ))}
         </ul>
@@ -144,6 +173,7 @@ const Home = () => {
                 id={each.id}
                 category={each.category}
                 imgUrl={each.imgUrl}
+                key={each.id}
               />
             ))}
           </ul>

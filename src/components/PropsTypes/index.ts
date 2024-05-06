@@ -2,6 +2,9 @@ export interface headerButtonType {
   id: string;
   name: string;
   key?: string;
+  getId?: (id: string) => void;
+  isActiveId?: boolean;
+  navigate?: string;
 }
 export interface eventsObjType {
   id: string;

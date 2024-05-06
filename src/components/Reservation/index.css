@@ -1,0 +1,52 @@
+.checkOutCon {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.checkoutForm {
+  margin-top: 20px;
+  width: 38vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hr-for-check {
+  width: 38vw;
+  margin-top: 25px;
+}
+
+.full-name-input {
+  background: none;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+  width: 120px;
+}
+.total-container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.reserveBtn {
+  width: 12vw;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+@media (min-width: 520px) {
+  .footer-ul li {
+    font-size: 8px;
+  }
+  .footer-container p {
+    font-size: 7px;
+  }
+}

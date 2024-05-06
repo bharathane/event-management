@@ -1,24 +1,34 @@
 .allian-evnets {
   text-align: center;
   font-family: Druk Wide Trial;
-  font-size: 126px;
+  font-size: 63px;
   font-weight: 700;
-  line-height: 151.2px;
   text-align: center;
+}
+
+.home-hr-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.home-hr {
+  width: 38.5vw;
+  align-self: center;
 }
 
 .magical-meeting {
   font-family: Druk Wide Trial;
-  font-size: 56px;
+  font-size: 38px;
   font-weight: 500;
-  line-height: 67.2px;
   text-align: center;
 }
 
 .home-div {
   background-color: #fff152;
   min-height: 70vh;
-
+  margin-top: 50px;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -27,6 +37,7 @@
   position: relative;
   left: 48px;
   width: 50vw;
+  margin-left: 8vw;
 }
 
 .each-card-li {
@@ -35,15 +46,16 @@
   box-sizing: border-box;
 }
 .each-container {
-  width: 23vw;
+  width: 18vw;
 }
 .home-filter-ul {
   display: flex;
   align-items: center;
-  width: 70vw;
+  width: 50vw;
   box-sizing: border-box;
   gap: 10px;
   margin-top: 20px;
+  margin-left: 8vw;
 }
 
 .each-card-container {
@@ -56,12 +68,69 @@
 
 .allian-footer {
   font-family: SoDo Sans;
-  font-size: 150px;
-  font-weight: 600;
-  line-height: 359.99px;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100px;
   text-align: center;
 }
 
 .event-span {
   color: rgb(243, 45, 45);
+}
+
+@media (min-width: 760px) and (max-width: 1000px) {
+  .allian-footer {
+    font-size: 90px;
+  }
+
+  .home-hr {
+    width: 68vw;
+  }
+
+  .home-filter-ul,
+  .categories {
+    margin-left: 3.5vw;
+  }
+}
+
+@media (min-width: 635px) and (max-width: 760px) {
+  .home-hr {
+    width: 80vw;
+  }
+  .home-filter-ul,
+  .categories {
+    margin-left: 2.5vw;
+  }
+}
+@media (min-width: 400px) and (max-width: 635px) {
+  .home-hr {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 558px) {
+  .allian-footer {
+    font-size: 30px;
+  }
+  .allian-evnets {
+    font-size: 18px;
+  }
+  .magical-meeting {
+    font-size: 11px;
+  }
+  .categories {
+    font-size: 18px;
+  }
+  .home-filter-ul,
+  .categories {
+    margin-left: 2.5vw;
+  }
+
+  .each-card-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .each-container {
+    width: 60vw;
+  }
 }

@@ -5,9 +5,12 @@
   gap: 100px;
   height: 50vh;
 }
+.backColor-active {
+  background-color: orange;
+}
 .reverse {
   width: Fixed (280px) px;
-  height: Hug (64px) px;
+
   top: 762px;
   left: 256px;
   padding: 20px 32px 20px 32px;
@@ -37,4 +40,59 @@
 }
 .calender-flex {
   display: flex;
+}
+.reverse:hover {
+  background: orange;
+}
+.confirm-btn {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+@media (max-width: 913px) {
+  .calender-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .calender-parent hr {
+    width: 80vw;
+  }
+  .date-timings {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .time-button {
+    max-width: 50px;
+  }
+  .time-button p {
+    font-size: 8px;
+  }
+  .reverse {
+    width: 200px;
+
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    gap: 2px;
+    border-radius: 10px;
+    background: #a29f9a;
+    color: white;
+
+    margin-top: 5px;
+  }
+  .br-tag {
+    display: none;
+  }
+  .checkOut-days {
+    margin-top: 600px;
+  }
+  .calender-flex {
+    display: f;
+    flex-direction: column;
+  }
 }

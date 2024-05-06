@@ -1,23 +1,31 @@
 import { Link } from "react-router-dom";
 import Header from "../Header";
+import { useEffect } from "react";
 import AllianFooter from "../AllianFooter";
 import "./index.css";
 const Details = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <div>
       <Header />
 
-      <h1 className="the-job">THE JOB HUNTING ACCELERATOR BOOTCAMP</h1>
+      <h1 className="the-job">
+        THE JOB HUNTING
+        <br /> ACCELERATOR BOOTCAMP
+      </h1>
       <div className="venue-details">
         <img
           src="https://res.cloudinary.com/dr2jqbir9/image/upload/v1714821746/Rectangle_124_bcesui.png"
           alt="event"
+          className="venue-big-img"
         />
         <div className="venue-content">
-          <hr />
+          <hr className="details-hr" />
           <br />
           <br />
-          <hr />
+          <hr className="details-hr" />
           <br />
           <br />
 
@@ -46,7 +54,7 @@ const Details = () => {
         <hr />
         <div className="rooms-container">
           <ul>
-            <h1>INCLUDES</h1>
+            <h1 className="includes-h1">INCLUDES</h1>
             <li>40 Seats</li>
             <li>3 Monitors</li>
             <li>Unlimited water</li>
@@ -68,14 +76,9 @@ const Details = () => {
               alt="rooms"
               className="rooms-image"
             />
-            <img
-              src="https://res.cloudinary.com/dr2jqbir9/image/upload/v1714821746/Rectangle_124_bcesui.png"
-              alt="rooms"
-              className="rooms-image"
-            />
           </div>
         </div>
-        <div style={{ marginTop: "30px" }}>
+        <div style={{ marginTop: "30px" }} className="additional-container">
           <h1 style={{ marginLeft: "23px" }}>ADDITIONAL</h1>
           <ul>
             <li style={{ listStyle: "none" }}>
