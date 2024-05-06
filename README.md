@@ -21,7 +21,7 @@ With its intuitive interface and robust functionality, our event management app 
 Here is a working live demo :  https://event-management-dusky-iota.vercel.app/
 
 
-## [Usage]https://event-management-dusky-iota.vercel.app/) 
+## [Usage](https://event-management-dusky-iota.vercel.app/) 
 
 ### Development
 Want to contribute? Great!
