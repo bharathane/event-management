@@ -24,7 +24,7 @@ const Calender = () => {
       <div>
         <Header />
         <h1 style={{ textAlign: "center", margin: "10px" }}>
-          KARL MARKS ROOMS
+          KRL MARKS ROOMS
         </h1>
         <div className="calender-parent">
           <div className="checkOut-days">
