@@ -38,7 +38,9 @@ To fix a bug or enhance an existing module, follow these steps:
 
 ## Built with 
 
-- [React Js](https://www.w3schools.com/REACT/DEFAULT.ASP) - React is a Popular JavaSript library used for build SinglePage applications.
+- [React TypeScript](https://www.typescriptlang.org/docs/handbook/react.html) - TypeScript is a superset of JavaScript.
 - [CSS](https://www.w3schools.com/css/) - CSS used for styling and responsiveness
 - [react-router-dom](https://www.w3schools.com/react/react_router.asp) - It is used for page navigations.
+- [react-toastify](https://www.npmjs.com/package/react-toastify) - Used for display toast notifications
+- [react-day-picker](https://www.npmjs.com/package/react-day-picker) - Used for display calender
 - and few third party packages....
