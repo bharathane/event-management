@@ -5,7 +5,7 @@
 <td>
 
   
-Our event management React application provides users with a seamless experience to explore, select, and book tickets for various events. Users can easily navigate through a list of upcoming events, browse event details such as venue, date, and time, and view comprehensive information about each event.
+Our event management React application provides users with a seamless experience to explore, select, and book tickets for various events. Users can easily navigate through a list of upcoming events, browse event details such as venue, date, and time, and view comprehensive information about each event and it will send confirmation mail to users.
 
 The application integrates a user-friendly calendar feature, allowing users to conveniently select dates for booking tickets. Upon selecting a date, users can reserve tickets for their preferred event, securing their spot for an unforgettable experience.
 
