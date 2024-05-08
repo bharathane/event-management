@@ -17,7 +17,7 @@ const HomeFilterButton = (props: porpsTypesForFilter) => {
   };
 
   return (
-    <li className={`home-filter-li ${isFilterBtnActive && "acive-color"}`}>
+    <li className={`home-filter-li`}>
       <button
         type="button"
         onClick={callParentFunc}

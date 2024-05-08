@@ -129,7 +129,6 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <AllianFooter />
     </div>
   );
 };

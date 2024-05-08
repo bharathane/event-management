@@ -247,7 +247,6 @@ const Reservation = () => {
             </button>
           </form>
           <hr className="hr-for-check" />
-          <AllianFooter />
         </div>
       </div>
     </div>

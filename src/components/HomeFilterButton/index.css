@@ -19,9 +19,6 @@
 
 .acive-color {
   background-color: orange;
-  box-sizing: border-box;
-
-  border-radius: 20px;
 }
 @media (min-width: 760px) and (max-width: 1000px) {
   .home-fliter-h1 {

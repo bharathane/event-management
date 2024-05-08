@@ -92,7 +92,6 @@ const Calender = () => {
           </div>
         </div>
       </div>
-      <AllianFooter />
     </>
   );
 };

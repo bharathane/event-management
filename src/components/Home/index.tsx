@@ -220,8 +220,6 @@ const Home = () => {
           </ul>
         </div>
       </div>
-
-      <AllianFooter />
     </div>
   );
 };
