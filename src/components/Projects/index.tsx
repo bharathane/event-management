@@ -1,9 +1,9 @@
-const Projects = () => {
+const Prodjucts = () => {
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Project</h1>
+      <h1 style={{ textAlign: "center" }}>Prodjucts</h1>
     </div>
   );
 };
 
-export default Projects;
+export default Prodjucts;

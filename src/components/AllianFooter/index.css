@@ -14,12 +14,3 @@
   margin-right: 22px;
   margin-bottom: 20px;
 }
-
-@media (min-width: 400px) and (max-width: 1000px) {
-}
-
-@media (min-width: 280px) and (max-width: 558px) {
-  .footer-ul {
-    display: none;
-  }
-}
