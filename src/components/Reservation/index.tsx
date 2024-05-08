@@ -1,59 +1,87 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import Header from "../Header";
+import { useEffect } from "react";
+import gsap from "gsap";
+import AllianFooter from "../AllianFooter";
+import { ToastContainer, toast } from "react-toastify";
 import "./index.css";
-import { setPriority } from "os";
-const Reservation = () => {
-  const [fullName, setFullName] = useState<string>("");
-  const [email, setemail] = useState<string>("");
-  const [phoneNumber, setPhoneNumber] = useState<string>("");
-  const [eventType, seteventType] = useState<string>("");
-  const [phoneError, setPhoneError] = useState<string>("");
-  const [promocode, setPomocode] = useState<string>("");
-  const [cardNomber, setCardNom] = useState<string>("");
-  const [cardMonth, setCardMOnth] = useState<string>("");
-  const [cardValid, setCardCalid] = useState<string>("");
-  const [showPhoneError, setShowPhoneError] = useState<boolean>(false);
+import { fstat } from "fs";
 
+const Reservation = () => {
+  const [fullName, setFullName] = useState<string>(""); // To Store User's FullName
+  const [email, setemail] = useState<string>(""); // To Store User's Email
+  const [phoneNumber, setPhoneNumber] = useState<string>(""); // To Store User's phone number
+  const [eventType, seteventType] = useState<string>(""); // To Store User's Event Type
+  const [phoneError, setPhoneError] = useState<string>(""); // To Store User's Phone Number Error
+  const [promocode, setPomocode] = useState<string>(""); // To Store User's Promo Code
+  const [cardNomber, setCardNom] = useState<string>(""); // To Store User's Card Number
+  const [cardMonth, setCardMOnth] = useState<string>(""); // To Store User's Card Month
+  const [cardValid, setCardCalid] = useState<string>(""); // To Store User's Card Validation
+  const notify = () => toast("Wow so easy!");
+  const [showPhoneError, setShowPhoneError] = useState<boolean>(false); // To display phone number Error
+
+  useEffect(() => {
+    gsap.fromTo(".hr-for-check", { x: 500 }, { x: 0, duration: 1 });
+    gsap.fromTo(".input-label", { x: -400 }, { x: 0, duration: 1 });
+    gsap.fromTo(
+      ".full-name-input",
+      { opacity: 0 },
+      { opacity: 1, duration: 2 }
+    );
+  }, []);
+  // Funtion For Change UserName Input Value
   const onChangeNameInputValue = (e: ChangeEvent<HTMLInputElement>) => {
     setFullName(e.target.value);
   };
 
+  // Funtion For Change Email Input Value
   const onChangeEmailInputVal = (e: ChangeEvent<HTMLInputElement>) => {
     setemail(e.target.value);
   };
 
+  // Funtion For Change Phone Number Input Value
   const onChangePhoneNumberValue = (e: ChangeEvent<HTMLInputElement>) => {
     setPhoneNumber(e.target.value);
   };
 
+  // Funtion For Change Promo Code Input Value
   const onChangePromo = (e: ChangeEvent<HTMLInputElement>) => {
     setPomocode(e.target.value);
   };
+
+  // Funtion For Change Card Number Input Value
   const onChangeCardNO = (e: ChangeEvent<HTMLInputElement>) => {
     setCardNom(e.target.value);
   };
+
+  // Funtion For Change Card Month Input Value
   const onChangecardMonth = (e: ChangeEvent<HTMLInputElement>) => {
     setCardMOnth(e.target.value);
   };
+
+  // Funtion For Change Card Valid Input Value
   const onchangeCardValid = (e: ChangeEvent<HTMLInputElement>) => {
     setCardCalid(e.target.value);
   };
+
+  // Funtion For Change Event Type Input Value
   const onChangeEventType = (e: ChangeEvent<HTMLInputElement>) => {
     seteventType(e.target.value);
   };
 
+  // Funtion For Form Submition
   const onSubmitFormData = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Phone number validation regular expression
     const phoneRegex = /^\d{10}$/;
     if (fullName === "") {
-      alert("Please Enter a Name");
+      toast("Please Enter a Name");
     } else if (!phoneRegex.test(phoneNumber)) {
       // If phone number is in wrong format
       setPhoneError("Invalid phone number. Must be 10 digits.");
       setShowPhoneError(true);
     } else if (eventType === "") {
-      alert("Please Select an Event Type");
+      toast("Please Select an Event Type");
     } else {
       // If phone number is in correct format
       setShowPhoneError(false);
@@ -86,12 +114,14 @@ const Reservation = () => {
       setCardMOnth("");
       setCardNom("");
       setPomocode("");
+      toast("Congratulations Your Reservation was successfull");
     }
   };
 
   return (
     <div>
       <Header />
+      <ToastContainer />
       <div className="checkOutCon">
         <div className="checkoutForm">
           <h1>CHECK OUT</h1>
@@ -99,7 +129,9 @@ const Reservation = () => {
           <form onSubmit={onSubmitFormData}>
             <div>
               <br />
-              <label htmlFor="fullName">FULL NAME :</label>
+              <label htmlFor="fullName" className="input-label">
+                FULL NAME :
+              </label>
               <input
                 type="text"
                 id="fullName"
@@ -112,7 +144,9 @@ const Reservation = () => {
             </div>
             <div>
               <br />
-              <label htmlFor="emailAdd">EMAIL :</label>
+              <label htmlFor="emailAdd" className="input-label">
+                EMAIL :
+              </label>
               <input
                 type="email"
                 id="emailAdd"
@@ -125,7 +159,9 @@ const Reservation = () => {
             </div>
             <div>
               <br />
-              <label htmlFor="promocode">PROMO CODE :</label>
+              <label htmlFor="promocode" className="input-label">
+                PROMO CODE :
+              </label>
               <input
                 type="text"
                 id="promocode"
@@ -139,7 +175,9 @@ const Reservation = () => {
 
             <div>
               <br />
-              <label htmlFor="phoneNumber">PHONE NUMBER :</label>
+              <label htmlFor="phoneNumber" className="input-label">
+                PHONE NUMBER :
+              </label>
               <input
                 type="text"
                 id="phoneNumber"
@@ -154,7 +192,9 @@ const Reservation = () => {
 
             <div>
               <br />
-              <label htmlFor="eventType">EVENT TYPE :</label>
+              <label htmlFor="eventType" className="input-label">
+                EVENT TYPE :
+              </label>
               <input
                 type="text"
                 id="eventType"
@@ -168,7 +208,9 @@ const Reservation = () => {
 
             <div>
               <br />
-              <label htmlFor="cardNO">CARD NO :</label>
+              <label htmlFor="cardNO" className="input-label">
+                CARD NO :
+              </label>
               <input
                 type="text"
                 id="cardNO"
@@ -204,14 +246,7 @@ const Reservation = () => {
             </button>
           </form>
           <hr className="hr-for-check" />
-          <div className="footer-container">
-            <ul className="footer-ul">
-              <li>PRIVACY & POLICY</li>
-              <li>TERMS & CONDITIONS</li>
-              <li>CONTACT US</li>
-            </ul>
-            <p>ALL IN FUND 2023</p>
-          </div>
+          <AllianFooter />
         </div>
       </div>
     </div>

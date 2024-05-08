@@ -8,12 +8,16 @@ interface idFOrTImeObh {
   idOF: string;
 }
 const CalenderCom = (props: idFOrTImeObh) => {
-  const [selected, setSelected] = useState<Date>();
-  const notify = () => toast("Wow so easy!");
+  const [selected, setSelected] = useState<Date>(); //To store user selected date in state
+  const notify = () => toast("Wow so easy!"); // to display toast Message
   let footer = <p>Please Book Event.</p>;
+
+  //if user selects any date it will formated and displayed
   if (selected) {
     footer = <p>You Booked at {format(selected, "PP")}.</p>;
   }
+
+  // To show toast Message based on user selection of dates and times
   const showTime = () => {
     if (selected && props.idOF !== "") {
       toast("Congratulations Your booking was successfull");
@@ -33,6 +37,7 @@ const CalenderCom = (props: idFOrTImeObh) => {
         footer={footer}
       />
       <ToastContainer />
+
       <button type="button" className="confirm-btn" onClick={showTime}>
         Confirm
       </button>

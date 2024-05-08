@@ -9,6 +9,8 @@ interface porpsTypesForFilter {
 
 const HomeFilterButton = (props: porpsTypesForFilter) => {
   const { single, getCategory, getIdForFilter, isFilterBtnActive } = props;
+
+  // Funtion For send category name and Active Button id
   const callParentFunc = () => {
     getCategory(single.name);
     getIdForFilter(single.id);

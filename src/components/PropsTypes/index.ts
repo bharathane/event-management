@@ -1,11 +1,14 @@
+// props Types for Header button
 export interface headerButtonType {
   id: string;
   name: string;
   key?: string;
   getId?: (id: string) => void;
   isActiveId?: boolean;
-  navigate?: string;
+  navigate?: string | null;
 }
+
+// props Types for Event object
 export interface eventsObjType {
   id: string;
   category: string;

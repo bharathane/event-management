@@ -2,9 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 35px;
+
+  box-sizing: border-box;
 }
 
 .header-container {
   height: 35px;
+
+  box-sizing: border-box;
 }

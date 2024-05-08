@@ -1,6 +1,6 @@
 .allian-evnets {
   text-align: center;
-  font-family: Druk Wide Trial;
+  font-family: "Roboto";
   font-size: 63px;
   font-weight: 700;
   text-align: center;
@@ -19,9 +19,10 @@
 }
 
 .magical-meeting {
-  font-family: Druk Wide Trial;
-  font-size: 38px;
-  font-weight: 500;
+  font-family: "Roboto";
+
+  font-size: 5.5vw;
+  font-weight: -500;
   text-align: center;
 }
 
@@ -29,77 +30,90 @@
   background-color: #fff152;
   min-height: 70vh;
   margin-top: 50px;
-  box-sizing: border-box;
+
   padding: 20px;
 }
 
 .categories {
-  position: relative;
-  left: 48px;
-  width: 50vw;
-  margin-left: 8vw;
+  font-size: 5vw;
 }
 
+.each-item-cls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .each-card-li {
   list-style: none;
-  padding: 10px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 15px;
   box-sizing: border-box;
+  box-shadow: 10px 10px 6px rgba(10, 10, 10, 0.3);
+  border: 1px solid black;
 }
 .each-container {
-  width: 18vw;
+  width: 16.5vw;
+  border-radius: 10px;
 }
 .home-filter-ul {
   display: flex;
-  align-items: center;
-  width: 50vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+
   box-sizing: border-box;
   gap: 10px;
   margin-top: 20px;
-  margin-left: 8vw;
 }
 
 .each-card-container {
   margin-top: 20px;
+  width: 72vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 6vw;
+  flex-wrap: wrap;
+}
+.category-div {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+}
+.child-category {
+  width: 72vw;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .allian-footer {
-  font-family: SoDo Sans;
-  font-size: 100px;
-  font-weight: 400;
-  line-height: 100px;
+  font-size: 9vw;
   text-align: center;
+  letter-spacing: 7px;
 }
 
 .event-span {
   color: rgb(243, 45, 45);
 }
+.allian-evnets {
+  font-size: 9vw;
+}
 
-@media (min-width: 760px) and (max-width: 1000px) {
+@media (min-width: 760px) {
   .allian-footer {
-    font-size: 90px;
-  }
-
-  .home-hr {
-    width: 68vw;
-  }
-
-  .home-filter-ul,
-  .categories {
-    margin-left: 3.5vw;
+    font-size: 13vw;
   }
 }
 
 @media (min-width: 635px) and (max-width: 760px) {
+  .allian-footer {
+    font-size: 13vw;
+  }
   .home-hr {
     width: 80vw;
-  }
-  .home-filter-ul,
-  .categories {
-    margin-left: 2.5vw;
   }
 }
 @media (min-width: 400px) and (max-width: 635px) {
@@ -108,27 +122,11 @@
   }
 }
 
-@media (min-width: 280px) and (max-width: 558px) {
-  .allian-footer {
-    font-size: 30px;
-  }
-  .allian-evnets {
-    font-size: 18px;
-  }
-  .magical-meeting {
-    font-size: 11px;
-  }
-  .categories {
-    font-size: 18px;
-  }
-  .home-filter-ul,
-  .categories {
-    margin-left: 2.5vw;
-  }
-
+@media (max-width: 600px) {
   .each-card-container {
     display: flex;
     flex-direction: column;
+    margin-right: 15vw;
   }
   .each-container {
     width: 60vw;

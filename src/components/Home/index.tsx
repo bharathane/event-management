@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
 import { v4 as uuidv4 } from "uuid";
 import Header from "../Header";
 import HomeFilterButton from "../HomeFilterButton";
@@ -8,6 +9,7 @@ import EachContainer from "../EachContainer";
 
 import "./index.css";
 
+// Object For diplaying List Of Events
 const eventsObj = [
   {
     id: uuidv4(),
@@ -24,6 +26,12 @@ const eventsObj = [
   {
     id: uuidv4(),
     category: "BUSSINESS",
+    imgUrl:
+      "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814454/Component_95_if7eqj.png",
+  },
+  {
+    id: uuidv4(),
+    category: "PRESS",
     imgUrl:
       "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814454/Component_95_if7eqj.png",
   },
@@ -47,6 +55,12 @@ const eventsObj = [
   },
   {
     id: uuidv4(),
+    category: "CULTURE",
+    imgUrl:
+      "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814453/Component_100_qhj83p.png",
+  },
+  {
+    id: uuidv4(),
     category: "BUSSINESS",
     imgUrl:
       "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814454/Component_95_if7eqj.png",
@@ -70,6 +84,12 @@ const eventsObj = [
     imgUrl:
       "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814453/Component_99_kmafmn.png",
   },
+  {
+    id: uuidv4(),
+    category: "MORE",
+    imgUrl:
+      "https://res.cloudinary.com/dr2jqbir9/image/upload/v1714814453/Component_99_kmafmn.png",
+  },
 
   {
     id: uuidv4(),
@@ -92,6 +112,7 @@ const eventsObj = [
   },
 ];
 
+// Object For display Filter button
 const homeFilterObjs = [
   { id: uuidv4(), name: "ALL" },
   { id: uuidv4(), name: "BUSSINESS" },
@@ -102,8 +123,8 @@ const homeFilterObjs = [
 ];
 
 const Home = () => {
-  const [categoryName, setCategoryName] = useState("ALL");
-  const [idForFilterBtn, setIdForFilterBtn] = useState(homeFilterObjs[0].id);
+  const [categoryName, setCategoryName] = useState("ALL"); //To Store categroy name
+  const [idForFilterBtn, setIdForFilterBtn] = useState(homeFilterObjs[0].id); // To store id of filter button
   /*useEffect(() => {
     const fetchEventsData = async () => {
       const url = `https://api.seatgeek.com/2/events?client_id=NDEzNDM3ODR8MTcxNDgxMzIxNy42MzIxMDA4`;
@@ -125,9 +146,23 @@ const Home = () => {
   }, []);
   */
 
+  useEffect(() => {
+    gsap.fromTo(
+      ".home-filter-ul",
+      {
+        x: -500,
+      },
+      { x: -40, duration: 1 }
+    );
+    gsap.fromTo(".categories", { opacity: 0 }, { opacity: 1, duration: 2 });
+  }, []);
+
+  // Funtion to get Category
   const getCategory = (name: string) => {
     setCategoryName(name);
   };
+
+  // To filter Objects based on user selection
   const filter = eventsObj.filter((each) => {
     if (categoryName === "ALL") {
       return eventsObj;
@@ -136,6 +171,7 @@ const Home = () => {
     }
   });
 
+  // Funtion for get Id of Active Filter Button
   const getIdForFilter = (id: string) => {
     setIdForFilterBtn(id);
   };
@@ -144,29 +180,28 @@ const Home = () => {
       <Header />
       <div>
         <h1 className="allian-evnets">ALLIAN EVENTS</h1>
-        <div className="home-hr-div">
-          <hr className="home-hr" />
-        </div>
-        <h1 className="magical-meeting">MAGICAL MEETING PLACE</h1>
-        <div className="home-hr-div">
-          <hr className="home-hr" />
-        </div>
+
+        <p className="magical-meeting">MAGICAL MEETING PLACE</p>
       </div>
 
       <div className="home-div">
-        <h1 className="categories">CATEGORIES</h1>
-        <ul className="home-filter-ul">
-          {homeFilterObjs.map((each) => (
-            <HomeFilterButton
-              single={each}
-              key={each.id}
-              getCategory={getCategory}
-              getIdForFilter={getIdForFilter}
-              isFilterBtnActive={idForFilterBtn === each.id}
-            />
-          ))}
-        </ul>
-        <div>
+        <div className="category-div">
+          <div className="child-category">
+            <h1 className="categories">CATEGORIES</h1>
+            <ul className="home-filter-ul">
+              {homeFilterObjs.map((each) => (
+                <HomeFilterButton
+                  single={each}
+                  key={each.id}
+                  getCategory={getCategory}
+                  getIdForFilter={getIdForFilter}
+                  isFilterBtnActive={idForFilterBtn === each.id}
+                />
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="each-item-cls">
           <ul className="each-card-container">
             {filter.map((each) => (
               <EachContainer
@@ -180,7 +215,6 @@ const Home = () => {
         </div>
       </div>
 
-      <hr />
       <AllianFooter />
     </div>
   );

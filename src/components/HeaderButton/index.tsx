@@ -8,12 +8,13 @@ const HeaderButton = ({
   isActiveId,
   navigate,
 }: headerButtonType) => {
+  //to send Id of Active Button
   const sendId = () => {
     getId?.(id);
   };
 
   return (
-    <Link to="/" style={{ textDecoration: "none" }}>
+    <Link to={`${navigate}`} style={{ textDecoration: "none" }}>
       <li
         className={`header-li ${isActiveId && "acive-color"}`}
         onClick={sendId}
