@@ -21,6 +21,7 @@ const Reservation = () => {
   const [showPhoneError, setShowPhoneError] = useState<boolean>(false); // To display phone number Error
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     gsap.fromTo(".hr-for-check", { x: 500 }, { x: 0, duration: 1 });
     gsap.fromTo(".input-label", { x: -400 }, { x: 0, duration: 1 });
     gsap.fromTo(

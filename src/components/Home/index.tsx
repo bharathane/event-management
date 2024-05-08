@@ -154,7 +154,13 @@ const Home = () => {
       },
       { x: -40, duration: 1 }
     );
-    gsap.fromTo(".categories", { opacity: 0 }, { opacity: 1, duration: 2 });
+    gsap.fromTo(".categories ", { opacity: 0 }, { opacity: 1, duration: 2 });
+    gsap.fromTo(".allian-evnets", { opacity: 0 }, { opacity: 1, duration: 2 });
+    gsap.fromTo(
+      ".magical-meeting",
+      { opacity: 0 },
+      { opacity: 1, duration: 2 }
+    );
   }, []);
 
   // Funtion to get Category
